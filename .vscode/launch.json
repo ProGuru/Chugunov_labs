@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Отладка программы на С++", // произвольное названиеы
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": true, // чтобы прога останавливалась на точке останова
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false, // если true, то будет выполнено в отдельном окне
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": false, // позволяет отлаживать програму построчно. Или можно нажать F5 два раза
+        }
+      ],
+      "preLaunchTask": "g++ build active file",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}
